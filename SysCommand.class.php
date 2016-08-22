@@ -3,10 +3,10 @@
  * Copyright Smx (smxdev4@gmail.com) 2016
  */
 
-require_once "log.php";
-require_once "lnx_cmd.php";
+require_once "Log.class.php";
+require_once "TermCommand.class.php";
 
-class SCommand {
+class SysCommand {
 	private $deps = array();
 	private $cmdfunc = null;
 	private $log = null;

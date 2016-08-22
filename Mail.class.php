@@ -2,7 +2,7 @@
 /*
  * Copyright Smx (smxdev4@gmail.com) 2016
  */
-require_once "lnx_cmd.php";
+require_once "TermCommand.class.php";
 
 class Mail {
 	private $recipients = array();

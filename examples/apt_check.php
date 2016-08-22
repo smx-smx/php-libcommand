@@ -1,8 +1,6 @@
 #!/usr/bin/env php
 <?php
-require_once "log.php";
-require_once "scommand.php";
-require_once "mail.php";
+require_once "libcommand.php";
 
 $l = new LogFile(array(
 	Log::LOG_BASENAME => "apt_mon",
@@ -16,7 +14,7 @@ if($l->initLog() === FALSE){
 	return 1;
 }
 
-$c = new SCommand($l);
+$c = new SysCommand($l);
 $c->setDeps(array("aptitude"));
 
 $h = $c->executeCmd("aptitude update");

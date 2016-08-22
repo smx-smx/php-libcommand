@@ -2,9 +2,7 @@
 /*
  * Copyright Smx (smxdev4@gmail.com) 2016
  */
-require_once "log.php";
-require_once "scommand.php";
-require_once "mail.php";
+require_once "libcommand.php";
 
 $l = new LogFile(array(
 	Log::LOG_BASENAME => "smxtest",
@@ -17,7 +15,7 @@ if($l->initLog() === FALSE){
 	return 1;
 }
 
-$c = new SCommand();
+$c = new SysCommand();
 $c->setDeps(array("ls"));
 $h = $c->executeCmd("ls");
 while(!feof($h)){
